@@ -1,0 +1,23 @@
+.order {
+  &-expired {
+    background-color: #ffe0e0;
+  }
+
+  &-success {
+    background-color: #e0ffe0;
+  }
+
+  &-body {
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 30%;
+
+    &-title{
+      padding-right: 50px;
+    }
+
+    &-button {
+      background-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,256 @@
+.card-columns {
+  column-count: 1;
+
+  @media (min-width: 992px) {
+    column-count: 2;
+  }
+}
+
+.dashboard {
+  &-hint {
+    font-size: .75rem;
+  }
+
+  &-sponsor {
+    display: flex;
+
+    &-image {
+      background-position: center center;
+      background-size: 100px 100px;
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+
+.card-deck {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  .card {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.personal {
+  &-card {
+    width: 260px;
+
+    &.mod-genealogy {
+      cursor: pointer;
+      margin-bottom: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 102px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 50px;
+        width: 90px;
+      }
+      @media (max-width: 768px) {
+        width: 60px;
+      }
+
+      .personal-card {
+        &-header {
+          font-size: .8rem;
+          padding: .25rem .50rem;
+
+          @media (max-width: 768px) {
+            font-size: .5rem;
+          }
+        }
+
+        &-body {
+          background-size: 100px 100px;
+          padding: 100px .25rem 0;
+
+          @media (max-width: 991px) {
+            background-size: 90px 90px;
+            font-size: .75rem;
+            padding-top: 90px;
+
+            .card-text {
+              font-size: .6rem;
+            }
+          }
+
+          @media (max-width: 768px) {
+            background-size: 60px 60px;
+            font-size: .75rem;
+            padding-top: 60px;
+          }
+          text-align: center;
+        }
+      }
+    }
+
+    &.mod-empty {
+      .personal-card-body {
+        padding-top: 104px;
+
+        @media (max-width: 991px) {
+          padding-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+          padding-top: 63px;
+        }
+      }
+    }
+
+    &.mod-next {
+      border-color: #502361;
+      border-width: 3px;
+    }
+
+    &-header {
+      font-weight: 700;
+    }
+
+    &-body {
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 260px 260px;
+      padding-top: 270px;
+    }
+  }
+}
+
+.genealogy {
+  &-card {
+    &-hint {
+      border-bottom: 1px #ccc solid;
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
+    }
+
+    &-left, &-right {
+      background-color: #fff;
+      border: 1px #ccc solid;
+      display: block;
+      font-size: 0.75rem;
+      position: absolute;
+      text-align: center;
+      top: 40%;
+      width: 40px;
+
+      @media (max-width: 991px) {
+        bottom: -39px;
+        top: auto;
+      }
+
+      @media (max-width: 768px) {
+        bottom: -32px;
+        font-size: 10px;
+        width: 30px;
+      }
+    }
+
+    &-left {
+      left: -40px;
+
+      @media (max-width: 991px) {
+        left: 0;
+      }
+    }
+
+    &-right {
+      right: -40px;
+
+      @media (max-width: 991px) {
+        right: 0;
+      }
+    }
+  }
+
+  &-lines {
+    position: relative;
+
+    @media (max-width: 370px) {
+      .col {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+
+    &:before {
+      border: 1px #ccc solid;
+      border-bottom: 0;
+      border-radius: 10px;
+      content: ' ';
+      height: 140px;
+      margin-left: 25%;
+      position: absolute;
+      top: 80px;
+      width: 50%;
+
+      @media (max-width: 991px) {
+        height: 125px;
+        margin-left: 23%;
+        top: 65px;
+        width: 54%;
+      }
+
+      @media (max-width: 768px) {
+        height: 125px;
+        margin-left: 22%;
+        top: 45px;
+        width: 56%;
+      }
+    }
+  }
+}
+
+.background {
+  &-pack {
+    &-lux {
+      background-color: #000;
+      color: #f1b634;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    &-vip {
+      background-color: #31153b;
+      color: #fff;
+    }
+
+    &-premium {
+      background-color: #ff5171;
+      color: #fff;
+    }
+
+    &-start {
+      background-color: #fbb03b;
+      color: #fff;
+    }
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow:
+            0 0 1px rgba(241, 182, 52, 0.5),
+            0 0 2px rgba(241, 182, 52, 0.4),
+            0 0 3px rgba(241, 182, 52, 0.3),
+            0 0 4px rgba(241, 182, 52, 0.2),
+            0 0 5px rgba(241, 182, 52, 0.1);
+  }
+  to {
+    text-shadow:
+            0 0 5px rgba(241, 182, 52, 1),
+            0 0 7px rgba(241, 182, 52, 0.9),
+            0 0 9px rgba(241, 182, 52, 0.8),
+            0 0 11px rgba(241, 182, 52, 0.7),
+            0 0 13px rgba(241, 182, 52, 0.6);
+  }
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+}

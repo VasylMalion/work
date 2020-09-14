@@ -1,0 +1,26 @@
+.withdraw {
+
+  &-bigfont {
+    font-size: 30px;
+
+    span {
+      font-size: 30px;
+    }
+  }
+
+  &-balance {
+    margin-bottom: 15px;
+
+    &-input {
+      flex: none !important;
+      font-size: 30px;
+      text-align: center;
+      width: 100px;
+    }
+  }
+
+  &-error {
+    color: #f00;
+    font-weight: bold;
+  }
+}

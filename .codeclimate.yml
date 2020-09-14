@@ -1,0 +1,22 @@
+version: "2"
+checks:
+  method-complexity:
+    enabled: false
+  method-lines:
+    enabled: false
+plugins:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        javascript:
+          mass_threshold: 50
+  scss-lint:
+    enabled: true
+  fixme:
+    enabled: true
+  nodesecurity:
+    enabled: true
+exclude_patterns:
+  - node_modules/
+  - "**/__tests__/"
